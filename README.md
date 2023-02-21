@@ -1,15 +1,3 @@
-## Criar a imagen node - docker
-
-```
-sudo docker build -t client . 
-```
-
-## Execute o contêiner do Docker
-
-```
-sudo docker-compose up -d
-```
-
 ## Instalar as dependências
 
 ```
@@ -22,9 +10,15 @@ cd client
 npm install
 ```
 
-## Start projeto 
-### Comando abaixo start react e node
+## Criar a imagen node - docker
 
 ```
-npm run dev
+sudo docker build -t node-v14 . 
+```
+
+## Execute o contêiner do Docker
+### Arquivo docker-composer já executa o start do projeto
+
+```
+sudo docker-compose up -d
 ```

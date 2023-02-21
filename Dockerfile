@@ -1,8 +1,11 @@
 FROM node:14
-WORKDIR /usr/src/app
+# APP_DIR variavel de ambiente, criada no arquivo .env
+ENV APP_DIR=/app
+WORKDIR ${APP_DIR}
 COPY package*.json ./
 RUN npm install
 COPY . .
-# RUN npm run build
-EXPOSE 3000
-# CMD [ "npm", "start" ]
+# PORT variavel de ambiente, criada no arquivo .env
+ENV PORT 3000
+EXPOSE ${PORT}
+

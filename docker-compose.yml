@@ -3,7 +3,7 @@ services:
   react-node:
     image: node-v14
     environment:
-      - PORT=3000
+      - PORT=${PORT}
       - APP_DIR=/client
     ports:
       - "${PORT}:${PORT}"

@@ -1,12 +1,19 @@
 version: "3.8"
 services:
-  client:
-    image: client
+  react-node:
+    image: node-v14
+    environment:
+      - PORT=3000
+      - APP_DIR=/client
     ports:
-      - "3000:3000"
+      - "${PORT}:${PORT}"
     volumes:
-      - .:/usr/src/app
-  # server:
-  #   image: server
-  #   ports:
-  #     - "4000:4000"
+      - .:${APP_DIR}
+    env_file:
+      - .env
+    command: "npm run dev"    
+
+
+
+
+      

@@ -17,7 +17,7 @@ sudo docker build -t node-v14 .
 ```
 
 ## Execute o contêiner do Docker
-### Arquivo docker-composer já executa o start do projeto
+#### Arquivo docker-composer já executa o start do projeto
 
 ```
 sudo docker-compose up -d
